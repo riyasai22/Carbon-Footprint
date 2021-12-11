@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbon Neutral | A Sustainablity awareness initiative</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" sizes="48x32" href="footprint.png" />
+  </head>
+  <body>
+    <audio src="music.mp3" id="play"></audio>
+    <div class="body_container">
+      <div class="header">
+        <h1>CALCULATE YOUR <span>CARBON FOOTPRINT</span></h1>
+        <div class="circles">
+          <div class="circle circle1 active"><i class="fas fa-home"></i></div>
+          <div class="circle circle2"><i class="fas fa-utensils"></i></div>
+          <div class="circle circle3"><i class="fas fa-tint"></i></div>
+          <div class="circle circle4"><i class="fas fa-fan"></i></div>
+          <div class="circle circle5"><i class="fas fa-trash"></i></div>
+          <div class="circle circle6"><i class="fas fa-plane"></i></div>
+          <div class="circle circle7"><i class="fas fa-seedling"></i></div>
+        </div>
+        <!-- <p class="info">Let's start with some basic information!</p> -->
+      </div>
+      <div class="container">
+        <form class="form_container container1 show">
+          <div class="form_item">
+            <label for="count"
+              >How many people do you share your home with?</label
+            >
+            <input
+              type="number"
+              id="count"
+              name="count"
+              placeholder="0"
+              min="1"
+              class="input"
+            />
+          </div>
+          <div class="form_item">
+            <label for="size">How would you describe your house size?</label>
+            <select type="text" id="size" name="size">
+              <option value="large">Large</option>
+              <option value="medium">Medium</option>
+              <option value="small">Small</option>
+              <option value="apartment">Apartment</option>
+            </select>
+          </div>
+          <button type="button" class="btn nextBtn">Next</button>
+        </form>
+
+        <form class="form_container container2">
+          <div class="form_item">
+            <label for="food">How often do you eat meat/dairy?</label>
+            <select type="text" id="food" name="food">
+              <option value="f1">Domestic meat on daily basis</option>
+              <option value="f2">Domestic meat few times per week</option>
+              <option value="f3">Vegetarian meals only</option>
+              <option value="f4">Vegan/Wild meat only</option>
+            </select>
+          </div>
+          <div class="form_item">
+            <label for="food2">How often do you eat preprocessed food?</label>
+            <select type="text" id="food2" name="food2">
+              <option value="p1">Most Often</option>
+              <option value="p2">Once in a while</option>
+              <option value="p3">Fresh & locally grown food only</option>
+            </select>
+          </div>
+
+          <div class="buttons">
+            <button type="button" class="btn backButton1">Back</button>
+            <button type="button" class="btn nextButton2">Next</button>
+          </div>
+        </form>
+        <form class="form_container container3">
+          <div class="form_item">
+            <label for="water"
+              >How often do you run your washing machine(per week)?</label
+            >
+            <input
+              type="number"
+              id="water"
+              name="water"
+              min="1"
+              class="input"
+              placeholder="0"
+            />
+          </div>
+          <div class="form_item">
+            <label for="water2"
+              >How often do you use your dishwasher(per week)?</label
+            >
+            <input
+              type="number"
+              id="water2"
+              name="water2"
+              min="1"
+              class="input"
+              placeholder="0"
+            />
+          </div>
+
+          <div class="buttons">
+            <button type="button" class="btn backButton2">Back</button>
+            <button type="button" class="btn nextButton3">Next</button>
+          </div>
+        </form>
+        <form class="form_container container4">
+          <div class="form_item">
+            <label for="purchase"
+              >How often do you buy new electronic gadgets(per year)?</label
+            >
+            <input
+              type="number"
+              id="purchase"
+              name="purchase"
+              min="0"
+              class="input"
+              placeholder="0"
+            />
+          </div>
+          <div class="form_item">
+            <label for="purchase2"
+              >How often do you buy new furniture(per year)</label
+            >
+            <input
+              type="number"
+              id="purchase2"
+              name="purchase2"
+              min="0"
+              class="input"
+              placeholder="0"
+            />
+          </div>
+          <div class="buttons">
+            <button type="button" class="btn backButton3">Back</button>
+            <button type="button" class="btn nextButton4">Next</button>
+          </div>
+        </form>
+
+        <form class="form_container container5">
+          <div class="form_item">
+            <label for="waste"
+              >How many times do you fill up your garbage cans(per week)?</label
+            >
+            <input
+              type="number"
+              id="waste"
+              name="waste"
+              min="0"
+              class="input"
+              placeholder="0"
+            />
+          </div>
+
+          <div class="form_item imp">
+            <label for="recycle"> Do you recycle waste? </label>
+            <input type="checkbox" id="recycle" name="recycle" />
+          </div>
+
+          <div class="form_item recycle-options" id="recycle-options">
+            <p>Select the catogories of waste you recycle?</p>
+            <div class="three">
+              <div class="imp">
+                <label for="glass">Glass</label>
+                <input type="checkbox" id="glass" name="glass" />
+              </div>
+              <div class="imp">
+                <label for="plastic">Plastic</label>
+                <input type="checkbox" id="plastic" name="plastic" />
+              </div>
+              <div class="imp">
+                <label for="paper">Paper</label>
+                <input type="checkbox" id="paper" name="paper" />
+              </div>
+            </div>
+            <div class="three">
+              <div class="imp">
+                <label for="aluminium">Aluminium</label>
+                <input type="checkbox" id="aluminium" name="aluminium" />
+              </div>
+              <div class="imp">
+                <label for="steel">Steel</label>
+                <input type="checkbox" id="steel" name="steel" />
+              </div>
+              <div class="imp">
+                <label for="compost">Food Waste(composting)</label>
+                <input type="checkbox" id="compost" name="compost" />
+              </div>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button type="button" class="btn backButton4">Back</button>
+            <button type="button" class="btn nextButton5">Next</button>
+          </div>
+        </form>
+
+        <form class="form_container container6">
+          <div class="form_item">
+            <label for="transport"
+              >Average mileage travelled by your personal vehicle?</label
+            >
+            <input
+              type="number"
+              id="transport"
+              name="transport"
+              min="0"
+              class="input"
+              placeholder="0"
+            />
+          </div>
+          <div class="form_item">
+            <label for="transport1"
+              >Average time travelled by public transportation</label
+            >
+            <input
+              type="number"
+              id="transport1"
+              name="transport1"
+              min="0"
+              class="input"
+              placeholder="0"
+            />
+          </div>
+          <div class="form_item">
+            <label for="transport2"
+              >Describe your travel options(per year)</label
+            >
+            <select type="text" id="transport2" name="transport2">
+              <option value="fl1">Intercontinental</option>
+              <option value="fl2">International</option>
+              <option value="fl3">Domestic</option>
+              <option value="fl4">Dont take flights</option>
+            </select>
+          </div>
+          <div class="buttons">
+            <button type="button" class="btn backButton5">Back</button>
+            <button type="button" class="btn nextButton6" id="finalButton">
+              Submit
+            </button>
+            <!-- <button type="button" class="btn submitButton">
+              <a href="final.html">Submit</a>
+            </button> -->
+          </div>
+        </form>
+        <form class="form_container container7">
+          <div class="title_part">
+            <p>Your annual carbon footprint is</p>
+            <p class="carbon_footprint" id="disp"></p>
+          </div>
+          <div class="description">
+            <p class="subtitle_part">SOLUTIONS</p>
+            <p class="solution">
+              It’s time to change your energy intake routines and shift to more
+              renewable resources like solar to bring about change. Cutting down
+              the amount of meat intake is also suggested as regular consumption
+              of meat results in release of greenhouse gases such as methane,
+              CO2, and nitrous oxide. Shifting to more energy efficient travel
+              options are also suggested. No contribution is small, so start
+              today for a better future.
+            </p>
+          </div>
+          <div class="display" id="display"></div>
+          <div class="buttons">
+            <button type="button" class="btn backButton6">Back</button>
+            <!-- <button type="button" class="btn nextButton4">Next</button> -->
+          </div>
+        </form>
+      </div>
+      <button class="homeLink homeLink1" type="click">
+        <i class="fas fa-home"></i>
+        <a href="HOME.html">BACK TO HOME </a>
+      </button>
+      <button id="factBtn" class="homeLink homeLink2" type="click">
+        <i class="fas fa-question"></i>
+        <!-- FUN FACT -->
+      </button>
+      <div class="fact" id="fact"></div>
+    </div>
+    <script src="app.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <script>
+      document.addEventListener("click", musicPlay);
+      function musicPlay() {
+        document.getElementById("play").play();
+        document.removeEventListener("click", musicPlay);
+      }
+    </script>
+  </body>
+</html>
